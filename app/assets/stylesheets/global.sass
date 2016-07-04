@@ -183,8 +183,13 @@ html, body
       width: 100px
       font-weight: normal
   .conference
+    dl
+      @include clearfix
     dt
-      width: 120px
+      float: left
+    dd 
+      white-space: nowrap
+      
 
   .status_update
     dl

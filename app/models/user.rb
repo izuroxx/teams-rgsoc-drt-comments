@@ -46,10 +46,10 @@ class User < ActiveRecord::Base
   ]
 
   include ActiveModel::ForbiddenAttributesProtection
-  include Authentication::ActiveRecordHelpers
+  include Authentication::ActiveRecordHelpers #helpers/authentication/active_record_helpers.rb
   include ProfilesHelper
 
-  include Rateable
+  include Rateable # concerns/ratable.rb
 
   devise :omniauthable
 
@@ -164,7 +164,7 @@ class User < ActiveRecord::Base
   def sanitize_location
     self.location = nil if self.location.blank?
   end
-
+#issue 455 - ??????
   def complete_from_github
     attrs = Github::User.new(github_handle).attrs rescue {}
     attrs[:name] = github_handle if attrs[:name].blank?

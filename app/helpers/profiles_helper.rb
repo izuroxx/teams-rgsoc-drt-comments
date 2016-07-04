@@ -1,4 +1,4 @@
-module ProfilesHelper
+module ProfilesHelper #included in User class, class Team; 
   def github_handle=(handle)
     super(normalize_handle(handle))
   end

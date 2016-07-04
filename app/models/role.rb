@@ -1,5 +1,5 @@
 class Role < ActiveRecord::Base
-  include GithubHandle
+  include GithubHandle  #concern
   include AASM
 
   TEAM_ROLES  = %w(student coach)

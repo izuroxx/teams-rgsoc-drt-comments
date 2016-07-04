@@ -1,4 +1,4 @@
-module Authentication
+module Authentication # included in User class user.rb
   module ActiveRecordHelpers
     def self.included(base)
       base.extend ClassMethods

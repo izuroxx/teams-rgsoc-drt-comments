@@ -1,5 +1,5 @@
 module Rateable
-  extend ActiveSupport::Concern
+  extend ActiveSupport::Concern #included in apllication.rb, Application class; Team class, team.rb; User class, user.rb
   included do
     has_many :ratings, as: :rateable
   end
